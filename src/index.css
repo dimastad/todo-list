@@ -15,6 +15,7 @@ code {
 .form-group {
   display: flex;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .item {
@@ -45,6 +46,11 @@ code {
   max-width: 100px;
 }
 
-#checkbox {
-  margin-right: 10px;
+.error {
+  color: red;
+  display: block;
+  transform: translateY(-20px);
+  margin-left: 0.75rem;
+  position: absolute;
+  font-size: 14px;
 }

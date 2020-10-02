@@ -23,6 +23,8 @@ function App() {
     if (text.length && text.length <= textLength) {
       setNotes([ text, ...notes ])
       localStorage.setItem('notes', [ text, ...notes ])
+    } else {
+      console.log('err')
     }
     setText('')
   }
@@ -52,6 +54,9 @@ function App() {
           onSubmit={handeSubmit}
           onChange={handleChange}
           value={text}/>
+        { text.length > textLength
+          ? <span className='error'>maximum characters exceeded</span>
+          : null}
         <hr />
         <ListGroup>
           {notes.map((note, index) => (
