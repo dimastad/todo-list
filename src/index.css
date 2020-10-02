@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item label {
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.item input {
+  visibility: hidden;
+}
+
+.item input:checked~label{
+  text-decoration: line-through;
+}
+
+.text-length {
+  margin-bottom: 15px;
+}
+
+.text-length input {
+  max-width: 100px;
+}
+
+#checkbox {
+  margin-right: 10px;
+}
