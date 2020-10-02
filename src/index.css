@@ -26,6 +26,7 @@ code {
 .item label {
   cursor: pointer;
   padding: 5px 15px;
+  margin: 0;
 }
 
 .item input {
