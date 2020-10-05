@@ -40,6 +40,7 @@ code {
 
 .text-length {
   margin-bottom: 15px;
+  align-items: center;
 }
 
 .text-length input {
@@ -53,4 +54,9 @@ code {
   margin-left: 0.75rem;
   position: absolute;
   font-size: 14px;
+}
+
+.error.error--text-length {
+  position: relative;
+  transform: translateY(0);
 }

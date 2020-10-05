@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Container, FormControl, InputGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import InputForm from './components/InputForm/InputForm';
-// import List from './components/List/List';
 
 function App() {
   const [textLength, setTextLength] = useState(5)
@@ -33,6 +32,7 @@ function App() {
     _notes.splice(index, 1)
     setNotes(_notes)
     localStorage.setItem('notes', [ _notes ])
+    _notes.length === 0 && localStorage.clear()
   }
 
   return (
@@ -49,6 +49,9 @@ function App() {
             onChange={getTextLength}
             value={textLength}
           />
+          { isNaN(textLength)
+            ? <span className='error error--text-length'>Only numbers allowed</span>
+            : null }
         </InputGroup>
         <InputForm 
           onSubmit={handeSubmit}
